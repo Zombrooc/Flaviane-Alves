@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   width: 100%;
   height: 65px;
-  background: var(--color-dark);
+  background: var(--color-light);
   display: flex;
 
   z-index: 4444;
@@ -32,31 +32,13 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-  font-style: italic;
-  font-size: 1.5rem;
-  font-family: "Pacifico";
-  font-weight: 100;
-
-  a {
-    color: var(--color-light);
-  }
-
-  p {
-    margin: 0 !important;
-    line-height: 0 !important;
-
-    span {
-      font-family: "JetBrains Mono" !important;
-    }
-  }
-
   @media screen and (max-width: 961px) {
     width: 50%;
   }
 
-  @media screen and (max-width: 340px) {
+  /* @media screen and (max-width: 340px) {
     font-size: 1.2rem;
-  }
+  } */
 `;
 
 export const Menu = styled.div`
@@ -74,16 +56,12 @@ export const Menu = styled.div`
     left: 0;
     width: ${(props) => (props.isOpen ? "100vw" : "0")};
     height: 100vh;
-    background: var(--color-dark);
+    background: var(--color-light);
     transition: width 0.5s ease;
     overflow: hidden;
 
     a {
       color: #fff;
-    }
-
-    span.username {
-      margin: 0 !important;
     }
   }
 `;
@@ -100,43 +78,28 @@ export const MenuItem = styled.div`
 
   a,
   button {
-    font-weight: 500;
+    font-weight: 700;
     border: none;
     text-transform: uppercase;
-    padding: 1rem 2.5rem;
+    padding: 0.8rem 2rem;
     background-color: transparent;
-    transform: 0.5s;
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    color: var(--color-light);
+    color: var(--color-dark);
     font-size: 0.8rem;
-
-    &:hover:not(.active) {
-      color: #fff;
-    }
+    font-style: bold;
+    transition: 0.5s;
 
     &.active {
-      background-color: var(--color-danger);
-      transition: 0.5s;
+      background-color: var(--color-orange);
       color: var(--color-light) !important;
       border-radius: 7px;
-      border: 1px solid var(--color-danger);
-
-      &.signup {
-        background: var(--color-light);
-        border: 1px solid currentColor;
-
-        color: var(--color-dark) !important;
-
-        &:hover {
-          background: transparent;
-          color: var(--color-light) !important;
-        }
-      }
+      border: 1px solid var(--color-orange);
 
       &:hover {
         background: transparent;
+        color: var(--color-orange) !important;
       }
     }
   }
@@ -150,7 +113,7 @@ export const MenuItem = styled.div`
 
 export const ToggleButton = styled.div`
   font-size: 35px;
-  color: var(--color-light) !important;
+  color: var(--color-dark) !important;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -172,10 +135,10 @@ export const ToggleButton = styled.div`
 
 export const CloseIcon = styled.div`
   font-size: 3rem;
-  color: var(--color-light);
+  color: var(--color-dark);
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
+  right: 0.7rem;
+  top: 0.7rem;
   cursor: pointer;
   display: ${(props) => (props.isOpen ? "block" : "none")};
 `;

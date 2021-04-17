@@ -8,9 +8,12 @@ export default createGlobalStyle`
     --color-dark: #2e2e2e;
     --color-info: #24b0e3;
     --color-light: #f5f5f5;
+    --color-orange: #ff8000;
+    --color-purple: #bd8bca;
 
-    font-family: "Nunito", sans-serif;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 14px;
+    font-weight: 400;
   }
 
   * {

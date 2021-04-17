@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { signIn, signOut, useSession } from "next-auth/client";
 import Link from "next/link";
 import { MdClose, MdMenu } from "react-icons/md";
 
 import useWindowSize from "../useWindowSize.js";
+
+import Logo from '../../assets/images/doTerra.svg';
 
 import {
   Nav,
@@ -17,7 +18,6 @@ import {
 
 function Navbar() {
   const [menuStatus, setMenuStatus] = useState(false);
-  const [ session, loading ] = useSession();
 
   const size = useWindowSize();
 
@@ -37,9 +37,7 @@ function Navbar() {
         <Title>
           <Link href="/">
             <a>
-              <p>
-                The Simple <span>TECH</span>
-              </p>
+              <img src={Logo} alt="DoTerra Logo"/>
             </a>
           </Link>
         </Title>
@@ -50,35 +48,24 @@ function Navbar() {
           <CloseIcon isOpen={menuStatus} onClick={menuHandler}>
             <MdClose />
           </CloseIcon>
-          {!session && (
-            <>
-              <MenuItem>
-                  <a onClick={() => signIn()}>Entrar</a>
-              </MenuItem>
-              <MenuItem>
-                <Link href="/auth/signup">
-                  <a>Cadastrar</a>
-                </Link>
-              </MenuItem>
-            </>
-          )}
-          {session && (
-            <>
-              <MenuItem>
-                <Link href="/">
-                  <a> {session.user.name}</a>
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <a onClick={() => signOut()} className="active">
-                  Sair
-                </a>
-              </MenuItem>
-            </>
-          )}
           <MenuItem>
-            <Link href="/request-assistence">
-              <a className="active">Solicitar Assistêcia</a>
+            <Link href="/">
+              <a>Ínicio</a>
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link href="/">
+              <a>Óleos Essenciais</a>
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link href="/">
+              <a>Sobre</a>
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link href="/">
+              <a className="active">Cadastrar Agora</a>
             </Link>
           </MenuItem>
         </Menu>

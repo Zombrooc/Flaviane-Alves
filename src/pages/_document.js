@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <title>döTerra - Flaviane Alves</title>
           <meta name="title" content="döTerra - Flaviane Alves" />
           <meta
             name="description"
