@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "döTerra - Flaviane Alves",
+    "short_name": "döTerra - Consultora Flaviane Alves",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",
@@ -38,8 +38,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "start_url": "https://flavianealves.tk",
+    "theme_color": "#bd8bca",
+    "background_color": "#bd8bca",
+    "start_url": "/",
     "display": "standalone"
 }
