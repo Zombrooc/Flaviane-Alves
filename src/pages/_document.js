@@ -32,88 +32,68 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          {/* Primary Meta Tags */}
-          <meta name="title" content="The Simple" />
+          <title>döTerra - Flaviane Alves</title>
+          <meta name="title" content="döTerra - Flaviane Alves" />
           <meta
             name="description"
-            content="The Simple Network - Uma maneira simples de solucionar seus  problemas com informática."
+            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais döTerra."
           />
 
-          {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.thesimple.ga/" />
-          <meta property="og:title" content="The Simple" />
+          <meta property="og:url" content="https://www.flavianealves.tk/" />
+          <meta property="og:title" content="döTerra - Flaviane Alves" />
           <meta
             property="og:description"
-            content="The Simple Network - Uma maneira simples de solucionar seus  problemas com informática."
+            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais döTerra."
           />
           <meta
             property="og:image"
-            content="https://thesimpletech.com.br/images/banner.png"
+            content="https://www.flavianealves.tk/banner.png"
           />
 
-          {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://www.thesimple.ga/" />
-          <meta property="twitter:title" content="The Simple" />
+          <meta
+            property="twitter:url"
+            content="https://www.flavianealves.tk/"
+          />
+          <meta property="twitter:title" content="döTerra - Flaviane Alves" />
           <meta
             property="twitter:description"
-            content="The Simple Network - Uma maneira simples de solucionar seus  problemas com informática."
+            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais döTerra."
           />
           <meta
             property="twitter:image"
-            content="https://thesimpletech.com.br/images/banner.png"
-          />
+            content="https://www.flavianealves.tk/banner.png"
+          ></meta>
 
-          <meta name="robots" content="index, follow" />
-          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-          <meta name="language" content="Portuguese" />
-          <meta name="revisit-after" content="7 days" />
-          <meta name="author" content="The Simple TECH" />
-
-          <meta name="theme-color" content="#2e2e2e" />
-          <link rel="manifest" href="/manifest.webmanifest" />
-          <link rel="shortcut icon" href="/images/favicon.ico" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/images/apple-touch-icon.png"
+            href="/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/images/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="194x194"
-            href="/images/favicon-194x194.png"
+            href="/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="192x192"
-            href="/images/android-chrome-192x192.png"
+            href="/android-chrome-192x192.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/images/favicon-16x16.png"
+            href="/favicon-16x16.png"
           />
-          <link
-            rel="mask-icon"
-            href="/images/safari-pinned-tab.svg"
-            color="#2e2e2e"
-          />
-          <meta name="msapplication-config" content="/browserconfig.xml" />
-          <meta name="msapplication-TileColor" content="#2e2e2e" />
-          <meta
-            name="msapplication-TileImage"
-            content="/images/mstile-144x144.png"
-          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bd8bca" />
+          <meta name="msapplication-TileColor" content="#603cba" />
+          <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+          <meta name="theme-color" content="#bd8bca" />
         </Head>
         <body>
           <Main />

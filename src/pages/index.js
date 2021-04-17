@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>The Simple TECH</title>
+        <title>döTerra - Flaviane Alves</title>
       </Head>
       <Navbar />
       <h1> Hello Next.JS + NextAuth </h1>
