@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { MdClose, MdMenu } from "react-icons/md";
+import { Link as ScrollLink } from "react-scroll";
 
 import useWindowSize from "../useWindowSize.js";
 
-import Logo from '../../assets/images/doTerra.svg';
+import Logo from "../../assets/images/doTerra.svg";
 
 import {
   Nav,
@@ -37,7 +38,7 @@ function Navbar() {
         <Title>
           <Link href="/">
             <a>
-              <img src={Logo} alt="DoTerra Logo"/>
+              <img src={Logo} alt="DoTerra Logo" />
             </a>
           </Link>
         </Title>
@@ -49,24 +50,24 @@ function Navbar() {
             <MdClose />
           </CloseIcon>
           <MenuItem>
-            <Link href="/">
-              <a>Ínicio</a>
-            </Link>
+            <ScrollLink to="mostWanted" spy={true} smooth={true} duration={800}>
+              Ínicio
+            </ScrollLink>
           </MenuItem>
           <MenuItem>
-            <Link href="/">
-              <a>Óleos Essenciais</a>
-            </Link>
+            <ScrollLink to="mostWanted" spy={true} smooth={true} duration={800}>
+              Óleos Essenciais
+            </ScrollLink>
           </MenuItem>
           <MenuItem>
-            <Link href="/">
-              <a>Sobre</a>
-            </Link>
+          <ScrollLink to="mostWanted" spy={true} smooth={true} duration={800}>
+              Sobre
+            </ScrollLink>
           </MenuItem>
           <MenuItem>
-            <Link href="/">
-              <a className="active">Cadastrar Agora</a>
-            </Link>
+            <ScrollLink to="firstBlock" spy={true} smooth={true} duration={800} className="active">
+              Cadastrar Agora
+            </ScrollLink>
           </MenuItem>
         </Menu>
       </Container>
