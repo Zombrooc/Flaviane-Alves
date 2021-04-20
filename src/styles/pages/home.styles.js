@@ -65,10 +65,13 @@ export const Block = styled.div`
     }
 
     div:nth-child(2) {
+
+      flex-direction: column;
+
       .centerBox {
         max-width: 750px;
         width: 100%;
-        height: 90%;
+        max-height: 80%;
         background: var(--color-light);
         color: var(--color-dark);
         padding: 35px 30px 30px 30px;

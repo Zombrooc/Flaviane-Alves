@@ -33,7 +33,22 @@ export default function Home() {
         </div>
         <div>
           <div className="centerBox">
-            aaa
+            <h1 style={{textAlign: 'center'}}> Seja um consultor <strong>döTERRA</strong></h1>
+            <hr/>
+            <form>
+              <label htmlFor="name">
+                Nome
+                <input type="text" name="name" placeholder="Digite seu nome"/>
+              </label>
+              <label htmlFor="email">
+                E-mail
+                <input type="text" name="email" placeholder="Digite seu e-mail"/>
+              </label>
+              <label htmlFor="whatsapp">
+                WhatsApp
+                <input type="text" name="whatsapp" placeholder="Digite seu número de WhatsApp"/>
+              </label>
+            </form>
           </div>
         </div>
       </Block>
