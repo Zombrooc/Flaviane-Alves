@@ -50,22 +50,50 @@ function Navbar() {
             <MdClose />
           </CloseIcon>
           <MenuItem>
-            <ScrollLink to="firstBlock" spy={true} smooth={true} duration={800}>
+            <ScrollLink
+              activeClass="activeLink"
+              to="firstBlock"
+              spy={true}
+              smooth={true}
+              duration={800}
+              onClick={menuHandler}
+            >
               Ínicio
             </ScrollLink>
           </MenuItem>
           <MenuItem>
-            <ScrollLink to="secondBlock" spy={true} smooth={true} duration={800}>
+            <ScrollLink
+              to="secondBlock"
+              spy={true}
+              smooth={true}
+              duration={800}
+              onClick={menuHandler}
+              activeClass="activeLink"
+            >
               Óleos Essenciais
             </ScrollLink>
           </MenuItem>
           <MenuItem>
-          <ScrollLink to="mostWanted" spy={true} smooth={true} duration={800}>
+            <ScrollLink
+              activeClass="activeLink"
+              to="mostWanted"
+              spy={true}
+              smooth={true}
+              duration={800}
+              onClick={menuHandler}
+            >
               Sobre
             </ScrollLink>
           </MenuItem>
           <MenuItem>
-            <ScrollLink to="firstBlock" spy={true} smooth={true} duration={800} className="active">
+            <ScrollLink
+              to="firstBlock"
+              spy={true}
+              smooth={true}
+              duration={800}
+              onClick={menuHandler}
+              className="active"
+            >
               Cadastrar Agora
             </ScrollLink>
           </MenuItem>

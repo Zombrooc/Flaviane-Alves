@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 
 import FirstBlockBG from "../assets/images/doterranovo_bg1.jpg";
 import blockDiv from "../assets/images/blockDiv.png";
+import doTerraOleo from "../assets/images/doterranovo_oleo1.jpg";
 
 import { Container, Block } from "../styles/pages/home.styles";
 
@@ -25,7 +26,7 @@ export default function Home() {
         <div>
           <p className="orangeLine"></p>
           <h1>
-            <b id="firstBlock"> Sua Nova Vida Começa Agora!</b>
+            <b className="firstBlock"> Sua Nova Vida Começa Agora!</b>
           </h1>
           <p>
             Conquiste uma Vida Mais Saudável e Tenha um Negócio Próprio com a{" "}
@@ -64,16 +65,32 @@ export default function Home() {
             </form>
           </div>
         </div>
-        <br/>
+        <br />
         <div className="blockDivision">
           <img src={blockDiv} alt="" />
         </div>
       </Block>
       <Block id="secondBlock">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis debitis
-        nisi explicabo laudantium? Cumque, natus voluptates eius vitae, officiis
-        qui temporibus, et ipsum obcaecati quis rerum laudantium ut saepe
-        veniam?
+        <img src={doTerraOleo} alt="" />
+        <div>
+          <h2>O Que São Óleos Essenciais?</h2>
+          <br/>
+          <p>
+            Todo óleo essencial é um extrato da natureza que são encontrados em
+            nossas plantas, podendo ter origem nas flores, raízes ou folhas.
+          </p>
+          <p>
+            Cada componente aromático extraído tem propriedades químicas
+            diferentes, por isso cada óleo tem um uso indicativo, seja como
+            estimulante, calmante, regenerativo, refrescante, limpeza e até
+            mesmo reforço do sistema imunológico.
+          </p>
+          <p>
+            Costumamos dizer que os óleos essenciais são o poder da terra e da
+            natureza em um frasco, até porque cada planta produz o óleo para sua
+            proteção e manutenção, e utilizamos esse poder para nos fortalecer.
+          </p>
+        </div>
       </Block>
     </Container>
   );
