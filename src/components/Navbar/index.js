@@ -50,12 +50,12 @@ function Navbar() {
             <MdClose />
           </CloseIcon>
           <MenuItem>
-            <ScrollLink to="mostWanted" spy={true} smooth={true} duration={800}>
+            <ScrollLink to="firstBlock" spy={true} smooth={true} duration={800}>
               Ínicio
             </ScrollLink>
           </MenuItem>
           <MenuItem>
-            <ScrollLink to="mostWanted" spy={true} smooth={true} duration={800}>
+            <ScrollLink to="secondBlock" spy={true} smooth={true} duration={800}>
               Óleos Essenciais
             </ScrollLink>
           </MenuItem>

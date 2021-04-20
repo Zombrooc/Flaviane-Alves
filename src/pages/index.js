@@ -69,7 +69,7 @@ export default function Home() {
           <img src={blockDiv} alt="" />
         </div>
       </Block>
-      <Block>
+      <Block id="secondBlock">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis debitis
         nisi explicabo laudantium? Cumque, natus voluptates eius vitae, officiis
         qui temporibus, et ipsum obcaecati quis rerum laudantium ut saepe

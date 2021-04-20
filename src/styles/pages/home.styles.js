@@ -106,7 +106,5 @@ export const Block = styled.div`
     }
   }
 
-  /* &:first-child {
-    
-  } */
+  
 `;
