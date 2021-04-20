@@ -86,8 +86,8 @@ export default createGlobalStyle`
 
   button {
     display: block;
-    background: #111;
-    color: #fff;
+    background: var(--color-orange);
+    color: var(--color-light);
     border: 0;
     cursor: pointer;
     border-radius: 4px;
@@ -98,6 +98,6 @@ export default createGlobalStyle`
     transition: background-color 0.2s;
   }
   button:hover {
-    background-color: #000;
+    background-color: #d47413;
   }
 `;

@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>döTerra - Flaviane Alves</title>
+        <title>dōTerra - Flaviane Alves</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

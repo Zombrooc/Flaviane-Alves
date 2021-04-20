@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const Block = styled.div`
-  height: 100%;
+  /* height: 100%; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -14,7 +14,7 @@ export const Block = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  div {
+  & > div {
     flex: 50%;
     padding: 20px;
 
@@ -28,8 +28,23 @@ export const Block = styled.div`
     }
   }
 
+  .blockDivision {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
   &#firstBlock {
-    padding: 0 220px;
+    min-height: 110%;
+    padding: 0 10%;
+    position: relative;
 
     div:nth-child(1) {
       color: var(--color-light);
@@ -67,11 +82,12 @@ export const Block = styled.div`
     div:nth-child(2) {
 
       flex-direction: column;
+      justify-content: space-around !important;
 
       .centerBox {
         max-width: 750px;
         width: 100%;
-        max-height: 80%;
+        /* max-height: 80%; */
         background: var(--color-light);
         color: var(--color-dark);
         padding: 35px 30px 30px 30px;

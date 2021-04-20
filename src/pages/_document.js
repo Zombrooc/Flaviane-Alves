@@ -32,18 +32,18 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <meta name="title" content="döTerra - Flaviane Alves" />
+          <meta name="title" content="dōTerra - Flaviane Alves" />
           <meta
             name="description"
-            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais döTerra."
+            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais dōTerra."
           />
 
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.flavianealves.tk/" />
-          <meta property="og:title" content="döTerra - Flaviane Alves" />
+          <meta property="og:title" content="dōTerra - Flaviane Alves" />
           <meta
             property="og:description"
-            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais döTerra."
+            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais dōTerra."
           />
           <meta
             property="og:image"
@@ -55,10 +55,10 @@ export default class MyDocument extends Document {
             property="twitter:url"
             content="https://www.flavianealves.tk/"
           />
-          <meta property="twitter:title" content="döTerra - Flaviane Alves" />
+          <meta property="twitter:title" content="dōTerra - Flaviane Alves" />
           <meta
             property="twitter:description"
-            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais döTerra."
+            content="Flaviane Rezende Alves Meliato, consultora de óleos essenciais dōTerra."
           />
           <meta
             property="twitter:image"

@@ -1,11 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { FaAngleDoubleRight } from 'react-icons/fa';
+import { FaAngleDoubleRight } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
 
 import Navbar from "../components/Navbar";
 
 import FirstBlockBG from "../assets/images/doterranovo_bg1.jpg";
+import blockDiv from "../assets/images/blockDiv.png";
 
 import { Container, Block } from "../styles/pages/home.styles";
 
@@ -13,7 +15,7 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>döTerra - Flaviane Alves</title>
+        <title>dōTerra - Flaviane Alves</title>
       </Head>
       <Navbar />
       <Block
@@ -27,30 +29,51 @@ export default function Home() {
           </h1>
           <p>
             Conquiste uma Vida Mais Saudável e Tenha um Negócio Próprio com a{" "}
-            <strong>doTERRA</strong>! Faça seu Cadastro Agora e Saiba Mais!
+            <strong>dōTERRA</strong>! Faça seu Cadastro Agora e Saiba Mais!
           </p>
-          <FaAngleDoubleRight/>
+          <FaAngleDoubleRight />
         </div>
         <div>
           <div className="centerBox">
-            <h1 style={{textAlign: 'center'}}> Seja um consultor <strong>döTERRA</strong></h1>
-            <hr/>
+            <h1 style={{ textAlign: "center" }}> Faça seu cadastro aqui </h1>
+            <br />
+            <hr />
+            <br />
             <form>
               <label htmlFor="name">
                 Nome
-                <input type="text" name="name" placeholder="Digite seu nome"/>
+                <input type="text" name="name" placeholder="Digite seu nome" />
               </label>
               <label htmlFor="email">
                 E-mail
-                <input type="text" name="email" placeholder="Digite seu e-mail"/>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                />
               </label>
               <label htmlFor="whatsapp">
                 WhatsApp
-                <input type="text" name="whatsapp" placeholder="Digite seu número de WhatsApp"/>
+                <input
+                  type="text"
+                  name="whatsapp"
+                  placeholder="Digite seu número de WhatsApp"
+                />
               </label>
+              <button type="submit">CADASTRAR</button>
             </form>
           </div>
         </div>
+        <br/>
+        <div className="blockDivision">
+          <img src={blockDiv} alt="" />
+        </div>
+      </Block>
+      <Block>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis debitis
+        nisi explicabo laudantium? Cumque, natus voluptates eius vitae, officiis
+        qui temporibus, et ipsum obcaecati quis rerum laudantium ut saepe
+        veniam?
       </Block>
     </Container>
   );
