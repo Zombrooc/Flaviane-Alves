@@ -10,41 +10,38 @@ export const Block = styled.div`
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  padding: 0 80px;
 
   display: flex;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 768px){
+    padding: 0 15px;
+  }
+
   & > div {
     flex: 50%;
-    padding: 20px;
+    /* padding: 20px; */
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 768px) {
       flex: 100%;
     }
   }
 
-  .blockDivision {
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
   &#firstBlock {
-    min-height: 110%;
-    padding: 0 10%;
+    /* min-height: 116%; */
+    min-height: 124%;
+    /* padding: 0 %; */
     position: relative;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 50px;
+      padding-top: 80px;
+    }
 
     div:nth-child(1) {
       color: var(--color-light);
@@ -80,7 +77,6 @@ export const Block = styled.div`
     }
 
     div:nth-child(2) {
-
       flex-direction: column;
       justify-content: space-around !important;
 
@@ -94,6 +90,19 @@ export const Block = styled.div`
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
       }
+    }
+  }
+
+  .blockDivision {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+      object-fit: cover;
     }
   }
 
