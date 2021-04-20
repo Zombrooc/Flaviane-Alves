@@ -33,7 +33,7 @@ export default createGlobalStyle`
 
   body {
     color: var(--color-dark);
-    background: var(--color-light);
+    background: #fff;
     -webkit-font-smoothing: antialiased !important;
   }
 
