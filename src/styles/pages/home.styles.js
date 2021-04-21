@@ -135,7 +135,7 @@ export const Block = styled.div`
       line-height: 1.72222;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       flex-direction: column-reverse;
       margin-top: 90px;
       margin-bottom: 20px;
@@ -143,7 +143,9 @@ export const Block = styled.div`
       padding-right: 30px;
 
       h2 {
-        font-size: 50px
+        font-size: 50px;
+        margin-top: 80px;
+        margin-bottom: 20px;
       }
 
       p {

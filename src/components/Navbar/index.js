@@ -69,6 +69,8 @@ function Navbar() {
               duration={800}
               onClick={menuHandler}
               activeClass="activeLink"
+              isDynamic={true}
+              offset={-50}
             >
               Óleos Essenciais
             </ScrollLink>

@@ -7,6 +7,7 @@ import { Link as ScrollLink } from "react-scroll";
 import Navbar from "../components/Navbar";
 
 import FirstBlockBG from "../assets/images/doterranovo_bg1.jpg";
+import SecondBlockBG from "../assets/images/doterranovo_bg2.jpg";
 import blockDiv from "../assets/images/blockDiv.png";
 import doTerraOleo from "../assets/images/doterranovo_oleo1.jpg";
 
@@ -74,7 +75,7 @@ export default function Home() {
         <img src={doTerraOleo} alt="" />
         <div>
           <h2>O Que São Óleos Essenciais?</h2>
-          <br/>
+          <br />
           <p>
             Todo óleo essencial é um extrato da natureza que são encontrados em
             nossas plantas, podendo ter origem nas flores, raízes ou folhas.
@@ -89,6 +90,16 @@ export default function Home() {
             Costumamos dizer que os óleos essenciais são o poder da terra e da
             natureza em um frasco, até porque cada planta produz o óleo para sua
             proteção e manutenção, e utilizamos esse poder para nos fortalecer.
+          </p>
+        </div>
+      </Block>
+      <Block>
+        <div style={{ backgroundImage: `url(${SecondBlockBG})` }}>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
+            corrupti dicta quisquam. Veritatis nisi ipsam quisquam odio
+            consequuntur ut fugit adipisci itaque? Ad hic possimus explicabo
+            culpa neque magnam delectus!
           </p>
         </div>
       </Block>
