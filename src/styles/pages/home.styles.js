@@ -7,11 +7,6 @@ export const Container = styled.div`
 
 export const Block = styled.div`
   /* height: 100%; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding: 0 80px;
 
   @media screen and (max-width: 768px) {
     padding: 0 15px;
@@ -23,6 +18,12 @@ export const Block = styled.div`
     position: relative;
     display: flex;
     flex-wrap: wrap;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 0 80px;
 
     & > div {
       flex: 50%;
@@ -154,6 +155,79 @@ export const Block = styled.div`
 
       img {
         width: 200px;
+      }
+    }
+  }
+
+  &#thirdBlock {
+    min-height: 100%;
+    position: relative;
+    padding: 0 17%;
+    text-align: center;
+
+    /* background-size: 100%;
+    background-repeat: no-repeat; */
+
+    & > img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -4444;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: block;
+
+      @media screen and (max-width: 768px) {
+        display: none !important;
+      }
+    }
+
+    h2 {
+      font-size: 70px;
+      font-weight: 300;
+      color: #354657;
+      line-height: 1.1;
+      margin-top: 50px;
+    }
+
+    & > div {
+      min-height: 100%;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 2fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+        padding: 15px;
+        height: auto;
+
+        img {
+          width: 85.5px;
+          margin: 0 auto;
+        }
+
+        h3 {
+          margin: 0px 0px 15px;
+          font-size: 30px;
+          color: var(--color-purple);
+          align-self: flex-start;
+        }
+
+        p {
+          margin: 0 0 15px;
+          font-size: 16px;
+          line-height: 1.72222;
+          align-self: flex-start;
+        }
       }
     }
   }

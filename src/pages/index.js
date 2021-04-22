@@ -11,6 +11,15 @@ import SecondBlockBG from "../assets/images/doterranovo_bg2.jpg";
 import blockDiv from "../assets/images/blockDiv.png";
 import doTerraOleo from "../assets/images/doterranovo_oleo1.jpg";
 
+import IconOne from "../assets/images/icons/doterranovo_icone1.png";
+import IconTwo from "../assets/images/icons/doterranovo_icone2.png";
+import IconThree from "../assets/images/icons/doterranovo_icone3.png";
+import IconFour from "../assets/images/icons/doterranovo_icone4.png";
+import IconFive from "../assets/images/icons/doterranovo_icone5.png";
+import IconSix from "../assets/images/icons/doterranovo_icone6.png";
+import IconSeven from "../assets/images/icons/doterranovo_icone7.png";
+import IconEight from "../assets/images/icons/doterranovo_icone8.png";
+
 import { Container, Block } from "../styles/pages/home.styles";
 
 export default function Home() {
@@ -93,14 +102,78 @@ export default function Home() {
           </p>
         </div>
       </Block>
-      <Block>
-        <div style={{ backgroundImage: `url(${SecondBlockBG})` }}>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
-            corrupti dicta quisquam. Veritatis nisi ipsam quisquam odio
-            consequuntur ut fugit adipisci itaque? Ad hic possimus explicabo
-            culpa neque magnam delectus!
-          </p>
+      <Block
+        id="thirdBlock"
+        // style={{ backgroundImage: `url(${SecondBlockBG})` }}
+      >
+        <img src={SecondBlockBG} alt="Leaf Background" />
+        <h2> Quais os benefícios dos Óleos Essencias? </h2>
+        <div className="grid-container">
+          <div>
+            <img src={IconOne} alt="" />
+            <h3> 100% Natural </h3>
+
+            <p>
+              Todos os óleos essenciais são extraídos de plantas e são 100%
+              naturais, seguros e eficazes
+            </p>
+          </div>
+          <div>
+            <img src={IconTwo} alt="" />
+            <h3> Antisséptico Poderoso </h3>
+
+            <p>Protege contra ameaças ambientais e mata germes e bactérias</p>
+          </div>
+          <div>
+            <img src={IconThree} alt="" />
+            <h3> Emoções Temporárias </h3>
+
+            <p>
+              Eleva o humor, reduz a irritabilidade, o sentimento de tristeza e
+              muito mais
+            </p>
+          </div>
+          <div>
+            <img src={IconFour} alt="" />
+            <h3> Estimulante Cerebral </h3>
+
+            <p>
+              Mais energia e foco para você ser mais produtivo(a) no seu
+              dia-a-dia
+            </p>
+          </div>
+          <div>
+            <img src={IconFive} alt="" />
+            <h3> Usado Desde Sempre </h3>
+
+            <p>
+              Os povos antigos utilizam os extratos e partes das plantas em sua
+              cultura
+            </p>
+          </div>
+          <div>
+            <img src={IconSix} alt="" />
+            <h3> Melhor Respiração </h3>
+
+            <p>Evita problemas respiratórios e melhora a capacidade pulmonar</p>
+          </div>
+          <div>
+            <img src={IconSeven} alt="" />
+            <h3> Durma Melhor </h3>
+
+            <p>
+              Chega de insônia e de irritação por conta de más noites de sono
+            </p>
+          </div>
+          <div>
+            <img src={IconEight} alt="" />
+            <h3> Melhora Pele e Cabelos </h3>
+
+            <p>
+              Previnem o envelhecimento da pele e ajuda a ter cabelos mais
+              fortes
+            </p>
+          </div>
         </div>
       </Block>
     </Container>
