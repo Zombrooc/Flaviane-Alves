@@ -9,7 +9,7 @@ export const Block = styled.div`
   /* height: 100%; */
 
   @media screen and (max-width: 768px) {
-    padding: 0 15px;
+    padding: 0 15px !important;
   }
 
   &#firstBlock {
@@ -40,12 +40,14 @@ export const Block = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-      padding-bottom: 50px;
-      padding-top: 80px;
+      padding-bottom: 150px;
+      padding-top: 150px;
     }
 
     div:nth-child(1) {
       color: var(--color-light);
+      margin-top: 150px;
+      /* padding-top: 150px; */
 
       p.orangeLine {
         border: 8px solid var(--color-orange);
@@ -79,7 +81,10 @@ export const Block = styled.div`
 
     div:nth-child(2) {
       flex-direction: column;
-      justify-content: space-around !important;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
 
       .centerBox {
         max-width: 750px;
@@ -93,7 +98,8 @@ export const Block = styled.div`
       }
 
       @media screen and (max-width: 768px) {
-        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-top: -60px;
       }
     }
 
@@ -126,6 +132,7 @@ export const Block = styled.div`
       font-weight: 700;
       color: #354657;
       line-height: 1.1;
+      text-align: center;
       /* margin-top: 150px;
       margin-bottom: 20px; */
     }
