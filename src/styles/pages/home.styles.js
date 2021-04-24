@@ -241,7 +241,7 @@ export const Block = styled.div`
           margin: 0 0 15px;
           font-size: 16px;
           line-height: 1.72222;
-          align-self: flex-start;
+          /* align-self: flex-start; */
         }
       }
     }
