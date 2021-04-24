@@ -202,11 +202,19 @@ export const Block = styled.div`
       grid-column-gap: 15px;
       grid-row-gap: 15px;
 
+      @media screen and (max-width: 1010px){
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+
+      @media screen and (max-width: 768px){
+        grid-template-columns: repeat(1, 1fr)
+      }
+
       div {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        /* align-items: center; */
+        /* justify-content: space-between; */
         padding: 15px;
         height: auto;
 
@@ -219,7 +227,7 @@ export const Block = styled.div`
           margin: 0px 0px 15px;
           font-size: 30px;
           color: var(--color-purple);
-          align-self: flex-start;
+          /* align-self: flex-start; */
         }
 
         p {
@@ -229,6 +237,10 @@ export const Block = styled.div`
           align-self: flex-start;
         }
       }
+    }
+
+    @media screen and (max-height: 600px){
+      padding: 0 5%;
     }
   }
 `;
