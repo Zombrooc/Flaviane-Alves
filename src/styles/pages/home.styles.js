@@ -85,7 +85,6 @@ export const Block = styled.div`
       align-items: center;
       padding: 20px;
 
-
       .centerBox {
         max-width: 750px;
         width: 100%;
@@ -209,19 +208,18 @@ export const Block = styled.div`
       grid-column-gap: 15px;
       grid-row-gap: 15px;
 
-      @media screen and (max-width: 1010px){
+      @media screen and (max-width: 1010px) {
         grid-template-columns: repeat(3, 1fr);
-
       }
 
-      @media screen and (max-width: 768px){
-        grid-template-columns: repeat(1, 1fr)
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
       }
 
       div {
         display: flex;
         flex-direction: column;
-        /* justify-content: space-between; */
+        justify-content: space-around;
         padding: 15px;
         height: auto;
 
@@ -232,7 +230,8 @@ export const Block = styled.div`
 
         h3 {
           margin: 0px 0px 15px;
-          font-size: 30px;
+          font-size: 27px;
+          font-weight: 400;
           color: var(--color-purple);
           /* align-self: flex-start; */
         }
@@ -246,8 +245,32 @@ export const Block = styled.div`
       }
     }
 
-    @media screen and (max-height: 600px){
+    /* @media screen and (max-height: 600px){
       padding: 0 5%;
+    } */
+  }
+
+  &#fourthBlock {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: var(--color-light);
+
+    p {
+      /* margin: 0 0 15px; */
+      font-size: 18px;
+      line-height: 1.72222;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-weight: 800;
+      font-size: 50px;
     }
   }
 `;

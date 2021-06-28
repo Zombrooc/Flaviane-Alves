@@ -1,13 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 
 import Navbar from "../components/Navbar";
 
 import FirstBlockBG from "../assets/images/doterranovo_bg1.jpg";
-import SecondBlockBG from "../assets/images/doterranovo_bg2.jpg";
+import ThirdBlockBG from "../assets/images/doterranovo_bg2.jpg";
+import FourthBlockBG from "../assets/images/doterranovo_bg3.jpg";
 import blockDiv from "../assets/images/blockDiv.png";
 import doTerraOleo from "../assets/images/doterranovo_oleo1.jpg";
 
@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>dōTerra - Flaviane Alves</title>
+        <title>Flaviane Alves - dōTerra </title>
       </Head>
       <Navbar />
       <Block
@@ -106,7 +106,7 @@ export default function Home() {
         id="thirdBlock"
         // style={{ backgroundImage: `url(${SecondBlockBG})` }}
       >
-        <img src={SecondBlockBG} alt="Leaf Background" />
+        <img src={ThirdBlockBG} alt="Leaf Background" />
         <h2> Quais os benefícios dos Óleos Essencias? </h2>
         <div className="grid-container">
           <div>
@@ -174,6 +174,26 @@ export default function Home() {
               fortes
             </p>
           </div>
+        </div>
+      </Block>
+      <Block
+        id="fourthBlock"
+        style={{ backgroundImage: `url(${FourthBlockBG})` }}
+      >
+        <div style={{ maxWidth: "720px" }}>
+          <p> Em 2019, o mercado de Vendas Diretas gerou</p>
+          <br />
+          <h2> 185.5 Bilhões de Dólares</h2>
+          <h2 style={{ fontWeight: "700", fontSize: "30px" }}>
+            {" "}
+            ou 963,15 bilhões de reais!
+          </h2>
+          <br />
+          <p style={{ fontWeight: "normal" }}>
+            Faça parte de um Mercado que não para de Crescer mesmo em tempos de
+            crise. O Brasil ocupa a 6º posição mundial com um total de R$54
+            bilhões de reais por ano e continua crescendo anos após ano.
+          </p>
         </div>
       </Block>
     </Container>
