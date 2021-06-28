@@ -189,7 +189,14 @@ export default function Home() {
             ou 963,15 bilhões de reais!
           </h2>
           <br />
-          <p style={{ fontWeight: "normal" }}>
+          <p
+            style={{
+              fontWeight: "normal",
+              margin: "0 0 15px",
+              fontSize: "18px",
+              lineHeight: "1.72222",
+            }}
+          >
             Faça parte de um Mercado que não para de Crescer mesmo em tempos de
             crise. O Brasil ocupa a 6º posição mundial com um total de R$54
             bilhões de reais por ano e continua crescendo anos após ano.

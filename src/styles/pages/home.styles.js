@@ -260,24 +260,34 @@ export const Block = styled.div`
     padding-left: 100px;
     padding-right: 100px;
     color: var(--color-light);
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 120px !important;
+      padding-bottom: 100px !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
 
     p {
       /* margin: 0 0 15px; */
       font-size: 18px;
       line-height: 1.72222;
       font-weight: 700;
+
+      @media screen and (max-width: 1080px) {
+        font-size: 16px !important;
+        font-size: 16px;
+      }
     }
 
     h2 {
       font-weight: 800;
       font-size: 50px;
-    }
 
-    @media screen and (max-width: 768px) {
-      padding-top: 120px;
-      padding-bottom: 100px;
-      padding-left: 100px;
-      padding-right: 100px;
+      @media screen and (max-width: 1080px) {
+        font-size: 30px !important;
+      }
     }
   }
 `;
