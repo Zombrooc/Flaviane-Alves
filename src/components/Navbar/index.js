@@ -26,6 +26,10 @@ function Navbar() {
     setMenuStatus(!menuStatus);
   };
 
+  const disableResponsiveMenu = () => {
+    setMenuStatus(false);
+  }
+
   useEffect(() => {
     if (size.width >= 960) {
       setMenuStatus(false);
@@ -56,7 +60,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={800}
-              onClick={menuHandler}
+              onClick={disableResponsiveMenu}
             >
               Ínicio
             </ScrollLink>
@@ -67,7 +71,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={800}
-              onClick={menuHandler}
+              onClick={disableResponsiveMenu}
               activeClass="activeLink"
               isDynamic={true}
               offset={-50}
@@ -82,7 +86,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={800}
-              onClick={menuHandler}
+              onClick={disableResponsiveMenu}
             >
               Sobre
             </ScrollLink>
@@ -93,7 +97,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={800}
-              onClick={menuHandler}
+              onClick={disableResponsiveMenu}
               className="active"
             >
               Cadastrar Agora
