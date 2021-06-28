@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { IoLogoWhatsapp } from 'react-icons/io';
+import { IoLogoWhatsapp } from "react-icons/io";
+
+// import "aos/dist/aos.css"; // You can also use <link> for styles
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -94,12 +96,25 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#603cba" />
           <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
           <meta name="theme-color" content="#bd8bca" />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/aos@next/dist/aos.css"
+          />
         </Head>
         <body>
           <Main />
           <a href="https://wa.me/5535991067742" className="whatsAppButton">
             <IoLogoWhatsapp />
           </a>
+          {/* <script
+            dangerouslySetInnerHTML={{
+              __html: `AOS.init()`,
+            }}
+          />
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script> */}
+          {/* <script dangerouslySetInnerHTML={{
+              __html: `AOS.init()`,
+            }}></script> */}
           <NextScript />
         </body>
       </Html>

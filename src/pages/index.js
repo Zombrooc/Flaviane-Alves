@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import { Link as ScrollLink } from "react-scroll";
+import AOS from "aos";
 
 import Navbar from "../components/Navbar";
 
@@ -23,6 +23,10 @@ import IconEight from "../assets/images/icons/doterranovo_icone8.png";
 import { Container, Block } from "../styles/pages/home.styles";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, [AOS]);
+
   return (
     <Container>
       <Head>
@@ -33,7 +37,7 @@ export default function Home() {
         style={{ backgroundImage: `url(${FirstBlockBG})` }}
         id="firstBlock"
       >
-        <div>
+        <div data-aos="fade-right">
           <p className="orangeLine"></p>
           <h1>
             <b className="firstBlock"> Sua Nova Vida Começa Agora!</b>
@@ -44,7 +48,7 @@ export default function Home() {
           </p>
           <FaAngleDoubleRight />
         </div>
-        <div>
+        <div data-aos="fade-left">
           <div className="centerBox">
             <h1 style={{ textAlign: "center" }}> Faça seu cadastro aqui </h1>
             <br />
@@ -81,8 +85,8 @@ export default function Home() {
         </div>
       </Block>
       <Block id="secondBlock">
-        <img src={doTerraOleo} alt="" />
-        <div>
+        <img src={doTerraOleo} alt="" data-aos="fade-right" />
+        <div data-aos="fade-left">
           <h2>O Que São Óleos Essenciais?</h2>
           <br />
           <p>
@@ -107,10 +111,10 @@ export default function Home() {
         // style={{ backgroundImage: `url(${SecondBlockBG})` }}
       >
         <img src={ThirdBlockBG} alt="Leaf Background" />
-        <h2> Quais os benefícios dos Óleos Essencias? </h2>
+        <h2 data-aos="fade-up"> Quais os benefícios dos Óleos Essencias? </h2>
         <div className="grid-container">
-          <div>
-            <img src={IconOne} alt="" />
+          <div data-aos="fade-right">
+            <img src={IconOne} alt="100% Natural" />
             <h3> 100% Natural </h3>
 
             <p>
@@ -118,14 +122,14 @@ export default function Home() {
               naturais, seguros e eficazes
             </p>
           </div>
-          <div>
-            <img src={IconTwo} alt="" />
+          <div data-aos="fade-right">
+            <img src={IconTwo} alt="Antisséptico Poderoso" />
             <h3> Antisséptico Poderoso </h3>
 
             <p>Protege contra ameaças ambientais e mata germes e bactérias</p>
           </div>
-          <div>
-            <img src={IconThree} alt="" />
+          <div data-aos="fade-left">
+            <img src={IconThree} alt="Emoções Temporárias" />
             <h3> Emoções Temporárias </h3>
 
             <p>
@@ -133,8 +137,8 @@ export default function Home() {
               muito mais
             </p>
           </div>
-          <div>
-            <img src={IconFour} alt="" />
+          <div data-aos="fade-left">
+            <img src={IconFour} alt="Estimulante Cerebral" />
             <h3> Estimulante Cerebral </h3>
 
             <p>
@@ -142,8 +146,8 @@ export default function Home() {
               dia-a-dia
             </p>
           </div>
-          <div>
-            <img src={IconFive} alt="" />
+          <div data-aos="fade-up">
+            <img src={IconFive} alt="Usado Desde Sempre" />
             <h3> Usado Desde Sempre </h3>
 
             <p>
@@ -151,22 +155,22 @@ export default function Home() {
               cultura
             </p>
           </div>
-          <div>
-            <img src={IconSix} alt="" />
+          <div data-aos="fade-up">
+            <img src={IconSix} alt="Melhor Respiração" />
             <h3> Melhor Respiração </h3>
 
             <p>Evita problemas respiratórios e melhora a capacidade pulmonar</p>
           </div>
-          <div>
-            <img src={IconSeven} alt="" />
+          <div data-aos="fade-up">
+            <img src={IconSeven} alt="Durma Melhor" />
             <h3> Durma Melhor </h3>
 
             <p>
               Chega de insônia e de irritação por conta de más noites de sono
             </p>
           </div>
-          <div>
-            <img src={IconEight} alt="" />
+          <div data-aos="fade-up">
+            <img src={IconEight} alt="Melhora Pele e Cabelos" />
             <h3> Melhora Pele e Cabelos </h3>
 
             <p>
@@ -181,10 +185,16 @@ export default function Home() {
         style={{ backgroundImage: `url(${FourthBlockBG})` }}
       >
         <div style={{ maxWidth: "720px" }}>
-          <p> Em 2019, o mercado de Vendas Diretas gerou</p>
+          <p data-aos="fade-right">
+            {" "}
+            Em 2019, o mercado de Vendas Diretas gerou
+          </p>
           <br />
-          <h2> 185.5 Bilhões de Dólares</h2>
-          <h2 style={{ fontWeight: "700", fontSize: "30px" }}>
+          <h2 data-aos="fade-right"> 185.5 Bilhões de Dólares</h2>
+          <h2
+            style={{ fontWeight: "700", fontSize: "30px" }}
+            data-aos="fade-right"
+          >
             {" "}
             ou 963,15 bilhões de reais!
           </h2>
@@ -196,6 +206,7 @@ export default function Home() {
               fontSize: "18px",
               lineHeight: "1.72222",
             }}
+            data-aos="fade-right"
           >
             Faça parte de um Mercado que não para de Crescer mesmo em tempos de
             crise. O Brasil ocupa a 6º posição mundial com um total de R$54
