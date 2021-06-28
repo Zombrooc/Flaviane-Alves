@@ -2,8 +2,6 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-// import "aos/dist/aos.css"; // You can also use <link> for styles
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -106,15 +104,6 @@ export default class MyDocument extends Document {
           <a href="https://wa.me/5535991067742" className="whatsAppButton">
             <IoLogoWhatsapp />
           </a>
-          {/* <script
-            dangerouslySetInnerHTML={{
-              __html: `AOS.init()`,
-            }}
-          />
-          <script src="https://unpkg.com/aos@next/dist/aos.js"></script> */}
-          {/* <script dangerouslySetInnerHTML={{
-              __html: `AOS.init()`,
-            }}></script> */}
           <NextScript />
         </body>
       </Html>
