@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "mongodb": "^3.6.6",
     "next": "10.1.3",
     "next-images": "^1.7.0",

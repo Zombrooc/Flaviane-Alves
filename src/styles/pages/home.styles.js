@@ -272,5 +272,12 @@ export const Block = styled.div`
       font-weight: 800;
       font-size: 50px;
     }
+
+    @media screen and (max-width: 768px) {
+      padding-top: 120px;
+      padding-bottom: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
   }
 `;
