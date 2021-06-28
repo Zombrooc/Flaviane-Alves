@@ -39,6 +39,31 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+
+    &.whatsAppButton{
+      position: fixed;
+      background: var(--color-success);
+      right: 15px;
+      bottom: 15px;
+      padding: 12px;
+      color: #fff;
+      border-radius: 100%;
+      z-index: 4444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+
+      &:hover {
+        background: var(--bs-green);
+      }
+
+      svg {
+        font-size: 25px;
+      }
+
+      
+    }
   }
 
   body,

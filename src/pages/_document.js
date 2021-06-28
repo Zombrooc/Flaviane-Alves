@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { IoLogoWhatsapp } from 'react-icons/io';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -96,6 +97,9 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <a href="https://wa.me/5535991067742" className="whatsAppButton">
+            <IoLogoWhatsapp />
+          </a>
           <NextScript />
         </body>
       </Html>
