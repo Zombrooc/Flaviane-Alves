@@ -55,7 +55,7 @@ export default createGlobalStyle`
       transition: 0.5s;
 
       &:hover {
-        background: var(--bs-green);
+        background: #198754;
       }
 
       svg {
