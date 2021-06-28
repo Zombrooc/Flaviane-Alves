@@ -146,7 +146,7 @@ export default function Home() {
               dia-a-dia
             </p>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-right">
             <img src={IconFive} alt="Usado Desde Sempre" />
             <h3> Usado Desde Sempre </h3>
 
@@ -155,13 +155,13 @@ export default function Home() {
               cultura
             </p>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-right">
             <img src={IconSix} alt="Melhor Respiração" />
             <h3> Melhor Respiração </h3>
 
             <p>Evita problemas respiratórios e melhora a capacidade pulmonar</p>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-left">
             <img src={IconSeven} alt="Durma Melhor" />
             <h3> Durma Melhor </h3>
 
@@ -169,7 +169,7 @@ export default function Home() {
               Chega de insônia e de irritação por conta de más noites de sono
             </p>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-left">
             <img src={IconEight} alt="Melhora Pele e Cabelos" />
             <h3> Melhora Pele e Cabelos </h3>
 
