@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import GlobalStyles from '../styles/GlobalStyles';
 import "../styles/externalImports.module.css";
-import "react-toastify/dist/ReactToastify.css";
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -5,6 +5,8 @@ import AOS from "aos";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
+
 import Navbar from "../components/Navbar";
 
 import FirstBlockBG from "../assets/images/doterranovo_bg1.jpg";
