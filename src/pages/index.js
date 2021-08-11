@@ -40,6 +40,21 @@ export default function Home() {
     });
   };
 
+  const showToast = () => {
+    return toast.success(
+      "Recebemos sua mensagem! Logo entraremos em contato",
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+      }
+    );
+  }
+
   const handleSubmit = (e) => {
     axios
       .post("https://formcarry.com/s/h7wuzW5K6Rf", inputData, {
@@ -48,18 +63,7 @@ export default function Home() {
       .then(function (response) {
         // access response.data in order to check formcarry response
         if (response.data.success) {
-          const notify = toast.success(
-            "Recebemos sua mensagem! Logo entraremos em contato",
-            {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: false,
-              progress: undefined,
-            }
-          );
+          showToast();
         } else {
           // handle error
           console.log(response.data.message);
