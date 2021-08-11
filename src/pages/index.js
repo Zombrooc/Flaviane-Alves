@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import AOS from "aos";
-import axios from 'axios';
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 
 import Navbar from "../components/Navbar";
 
@@ -45,7 +46,18 @@ export default function Home() {
       .then(function (response) {
         // access response.data in order to check formcarry response
         if (response.data.success) {
-          alert("Mensagem enviada com sucesso! Logo Entraremos em contato");
+          const notify = toast.success(
+            "Recebemos sua mensagem! Logo entraremos em contato",
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: false,
+              progress: undefined,
+            }
+          );
         } else {
           // handle error
           console.log(response.data.message);
@@ -63,6 +75,17 @@ export default function Home() {
       <Head>
         <title>Flaviane Alves - dōTerra </title>
       </Head>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+        pauseOnHover
+      />
       <Navbar />
       <Block
         style={{ backgroundImage: `url(${FirstBlockBG})` }}
