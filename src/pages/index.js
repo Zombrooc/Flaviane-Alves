@@ -3,9 +3,6 @@ import Head from "next/head";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import AOS from "aos";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-
-import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "../components/Navbar";
 
@@ -25,6 +22,7 @@ import IconSeven from "../assets/images/icons/doterranovo_icone7.png";
 import IconEight from "../assets/images/icons/doterranovo_icone8.png";
 
 import { Container, Block } from "../styles/pages/home.styles";
+import Toast from "../components/Toast";
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +30,7 @@ export default function Home() {
   }, [AOS]);
 
   const [inputData, setInputData] = useState();
+  const [ showToast, setShowToast]  = useState(false);
 
   const handleInput = (event) => {
     setInputData({
@@ -40,21 +39,6 @@ export default function Home() {
     });
   };
 
-  const showToast = () => {
-    return toast.success(
-      "Recebemos sua mensagem! Logo entraremos em contato",
-      {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-      }
-    );
-  }
-
   const handleSubmit = (e) => {
     axios
       .post("https://formcarry.com/s/h7wuzW5K6Rf", inputData, {
@@ -62,8 +46,14 @@ export default function Home() {
       })
       .then(function (response) {
         // access response.data in order to check formcarry response
-        if (response.data.success) {
-          showToast();
+
+        if (response.data.code === 200) {
+
+          setShowToast(true);
+
+          setInterval(() => {
+            setShowToast(false);
+          }, 6000)
         } else {
           // handle error
           console.log(response.data.message);
@@ -81,18 +71,7 @@ export default function Home() {
       <Head>
         <title>Flaviane Alves - dōTerra </title>
       </Head>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable={false}
-        pauseOnHover
-        style={{"zIndex": 444444}}
-      />
+      <Toast show={showToast}/>
       <Navbar />
       <Block
         style={{ backgroundImage: `url(${FirstBlockBG})` }}
