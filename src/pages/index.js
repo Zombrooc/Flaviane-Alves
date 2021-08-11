@@ -87,6 +87,7 @@ export default function Home() {
         pauseOnFocusLoss
         draggable={false}
         pauseOnHover
+        style={{"zIndex": 444444}}
       />
       <Navbar />
       <Block
