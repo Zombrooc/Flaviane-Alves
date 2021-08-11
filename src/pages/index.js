@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import AOS from "aos";
+import axios from 'axios';
 
 import Navbar from "../components/Navbar";
 
@@ -27,38 +28,35 @@ export default function Home() {
     AOS.init();
   }, [AOS]);
 
-  const [ inputData, setInputData ] = useState();
+  const [inputData, setInputData] = useState();
 
   const handleInput = (event) => {
     setInputData({
       ...inputData,
-      [event.target.name]: event.target.value
-    })
-  }
+      [event.target.name]: event.target.value,
+    });
+  };
 
-   const handleSubmit = e => {
-    axios.post(
-        "https://formcarry.com/s/h7wuzW5K6Rf", 
-        inputData, 
-        {headers: {"Accept": "application/json"}}
-      )
+  const handleSubmit = (e) => {
+    axios
+      .post("https://formcarry.com/s/h7wuzW5K6Rf", inputData, {
+        headers: { Accept: "application/json" },
+      })
       .then(function (response) {
-        
         // access response.data in order to check formcarry response
-        if(response.data.success){
-          alert('Mensagem enviada com sucesso! Logo Entraremos em contato');
+        if (response.data.success) {
+          alert("Mensagem enviada com sucesso! Logo Entraremos em contato");
         } else {
           // handle error
           console.log(response.data.message);
         }
- 
       })
       .catch(function (error) {
         console.log(error);
       });
-    
+
     e.preventDefault();
-  }
+  };
 
   return (
     <Container>
@@ -90,14 +88,20 @@ export default function Home() {
             <form onSubmit={handleSubmit}>
               <label htmlFor="name">
                 Nome
-                <input type="text" name="name" placeholder="Digite seu nome"  onChange={handleInput}/>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Digite seu nome"
+                  onChange={handleInput}
+                />
               </label>
               <label htmlFor="email">
                 E-mail
                 <input
                   type="text"
                   name="email"
-                  placeholder="Digite seu e-mail" onChange={handleInput}
+                  placeholder="Digite seu e-mail"
+                  onChange={handleInput}
                 />
               </label>
               <label htmlFor="whatsapp">
@@ -105,7 +109,8 @@ export default function Home() {
                 <input
                   type="text"
                   name="whatsapp"
-                  placeholder="Digite seu número de WhatsApp" onChange={handleInput}
+                  placeholder="Digite seu número de WhatsApp"
+                  onChange={handleInput}
                 />
               </label>
               <button type="submit">CADASTRAR</button>
