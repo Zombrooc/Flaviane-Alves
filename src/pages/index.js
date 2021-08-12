@@ -5,6 +5,7 @@ import AOS from "aos";
 import axios from "axios";
 
 import Navbar from "../components/Navbar";
+import Toast from "../components/Toast";
 
 import FirstBlockBG from "../assets/images/doterranovo_bg1.jpg";
 import ThirdBlockBG from "../assets/images/doterranovo_bg2.jpg";
@@ -22,7 +23,6 @@ import IconSeven from "../assets/images/icons/doterranovo_icone7.png";
 import IconEight from "../assets/images/icons/doterranovo_icone8.png";
 
 import { Container, Block } from "../styles/pages/home.styles";
-import Toast from "../components/Toast";
 
 export default function Home() {
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
   }, [AOS]);
 
   const [inputData, setInputData] = useState();
-  const [ showToast, setShowToast]  = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const handleInput = (event) => {
     setInputData({
@@ -48,12 +48,11 @@ export default function Home() {
         // access response.data in order to check formcarry response
 
         if (response.data.code === 200) {
-
           setShowToast(true);
 
-          setInterval(() => {
+          setTimeout(() => {
             setShowToast(false);
-          }, 6000)
+          }, 7 * 1000);
         } else {
           // handle error
           console.log(response.data.message);
@@ -71,7 +70,7 @@ export default function Home() {
       <Head>
         <title>Flaviane Alves - dōTerra </title>
       </Head>
-      <Toast show={showToast}/>
+      <Toast show={showToast} />
       <Navbar />
       <Block
         style={{ backgroundImage: `url(${FirstBlockBG})` }}
@@ -261,6 +260,7 @@ export default function Home() {
           </p>
         </div>
       </Block>
+      
     </Container>
   );
 }
